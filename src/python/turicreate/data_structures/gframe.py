@@ -291,12 +291,12 @@ class GFrame(SFrame):
             with cython_context():
                 if self._is_vertex_frame():
                     graph_proxy = self.__graph__.__proxy__.rename_vertex_fields(
-                        names.keys(), names.values()
+                        list(names.keys()), list(names.values())
                     )
                     self.__graph__.__proxy__ = graph_proxy
                 elif self._is_edge_frame():
                     graph_proxy = self.__graph__.__proxy__.rename_edge_fields(
-                        names.keys(), names.values()
+                        list(names.keys()), list(names.values())
                     )
                     self.__graph__.__proxy__ = graph_proxy
             return self
