@@ -106,3 +106,7 @@ deps/build
 # CCache within Docker
 /.docker_ccache/
 /.docker_images/
+
+# Nova editor files
+/.nova/
+
